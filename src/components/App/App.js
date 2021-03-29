@@ -15,10 +15,6 @@ class App extends React.Component {
           <p>
             I'm planning on doing all these things sooner, rather than later!
           </p>
-          {/* <img
-            className={styles.image}
-            src="http://uploads.kodilla.com/bootcamp/fer/11.react/space.png"
-          /> */}
         </List>
       </main>
     );
