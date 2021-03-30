@@ -5,6 +5,7 @@ import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
 import Column from '../Column/Column.js';
 import Creator from '../Creator/Creator.js';
+import Card from '../Card/Card.js';
 import { settings } from '../../data/dataStore';
 
 class List extends React.Component {
@@ -54,6 +55,12 @@ class List extends React.Component {
         <div className={styles.creator}>
           <Creator
             text={settings.columnCreatorText}
+            action={title => {
+              this.addColumn(title);
+            }}
+          />
+          <Card
+            text={settings.cardCreatorText}
             action={title => {
               this.addColumn(title);
             }}
