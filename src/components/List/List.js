@@ -39,8 +39,8 @@ class List extends React.Component {
   }
 
   render() {
-    console.log('Props', this.props);
-    console.log('State', this.state);
+    // console.log('Props', this.props);
+    // console.log('State', this.state);
     return (
       <section className={styles.component}>
         <Hero titleText={this.props.title} imgSrc={this.props.src} />
@@ -59,7 +59,7 @@ class List extends React.Component {
               this.addColumn(title);
             }}
           />
-          <Card text={settings.cardCreatorText} />
+          <Card title={settings.cardCreatorText} />
         </div>
       </section>
     );

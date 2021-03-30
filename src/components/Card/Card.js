@@ -1,26 +1,22 @@
 import React from 'react';
-import styles from './Card.scss';
 import PropTypes from 'prop-types';
+import styles from './Card.scss';
+import { settings } from '../../data/dataStore';
 
 class Card extends React.Component {
   static propTypes = {
-    text: PropTypes.string,
-  };
-
-  static defaultProps = {
-    text: 'Add new item',
-  };
-
-  state = {
-    value: '',
-    visibleButtons: false,
+    title: PropTypes.string,
   };
 
   render() {
+    const { title } = this.props;
+
     // console.log('Props', this.props);
-    // console.log('State', this.state);
-    return <div className={styles.component}></div>;
-    // console.log('State', this.state);
+    return (
+      <section className={styles.component} text={settings.cardCreatorText}>
+        <h3>{title}</h3>
+      </section>
+    );
   }
 }
 
