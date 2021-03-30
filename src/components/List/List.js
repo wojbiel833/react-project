@@ -59,12 +59,7 @@ class List extends React.Component {
               this.addColumn(title);
             }}
           />
-          <Card
-            text={settings.cardCreatorText}
-            action={title => {
-              this.addColumn(title);
-            }}
-          />
+          <Card text={settings.cardCreatorText} />
         </div>
       </section>
     );
