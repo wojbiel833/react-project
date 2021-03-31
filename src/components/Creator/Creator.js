@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
+    action: PropTypes.node,
   };
 
   static defaultProps = {
@@ -40,6 +41,12 @@ class Creator extends React.Component {
       value: '',
       visibleButtons: false,
     });
+    // const input = document.querySelector('.Creator_component_l_ZXX input');
+    // console.log(input);
+
+    window.confirm('Do you really want to cancel?');
+    // if (!window.confirm('Do you really want to cancel?'))
+    // this.input.value = state.value;
   };
 
   render() {

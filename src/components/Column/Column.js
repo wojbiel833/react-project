@@ -20,7 +20,6 @@ class Column extends React.Component {
   };
   state = {
     cards: this.props.cards || [],
-    // columns: this.props.columns || [],
   };
 
   addCard(title) {
