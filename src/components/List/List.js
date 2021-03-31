@@ -43,7 +43,7 @@ class List extends React.Component {
     // console.log('State', this.state);
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title} imgSrc={this.props.src} />
+        <Hero titleText={this.props.title} imgSrc={this.props.image} />
         <div className={styles.description}>
           {ReactHtmlParser(this.props.description)}
         </div>
