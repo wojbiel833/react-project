@@ -20,16 +20,16 @@ class Column extends React.Component {
   };
   state = {
     cards: this.props.cards || [],
-    // icon: this.props.icon,
+    // columns: this.props.columns || [],
   };
 
   addCard(title) {
     this.setState(state => ({
-      columns: [
-        ...state.columns,
+      cards: [
+        ...state.cards,
         {
-          key: state.columns.length
-            ? state.columns[state.columns.length - 1].key + 1
+          key: state.cards.length
+            ? state.cards[state.cards.length - 1].key + 1
             : 0,
           title,
           icon: 'list-alt',
