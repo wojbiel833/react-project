@@ -16,6 +16,7 @@ class List extends React.Component {
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
     src: PropTypes.string,
+    image: PropTypes.any,
     columns: PropTypes.array,
   };
   static defaultProps = {
@@ -63,7 +64,7 @@ class List extends React.Component {
         </div>
       </section>
     );
-    console.log('State', this.state);
+    // console.log('State', this.state);
   }
 }
 
