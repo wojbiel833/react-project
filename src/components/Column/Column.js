@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Column.scss';
-import Creator from '../Creator/Creator.js';
+// import Creator from '../Creator/Creator.js';
 import Card from '../Card/Card.js';
 import Icon from './Icon.js';
-import { settings } from '../../data/dataStore';
+// import { settings } from '../../data/dataStore';
 
 class Column extends React.Component {
   static propTypes = {
@@ -18,45 +18,27 @@ class Column extends React.Component {
     //setting default on {this.props.children}
     children: <p>I can do all the things!</p>,
   };
-  state = {
-    cards: this.props.cards || [],
-  };
-
-  addCard(title) {
-    this.setState(state => ({
-      cards: [
-        ...state.cards,
-        {
-          key: state.cards.length
-            ? state.cards[state.cards.length - 1].key + 1
-            : 0,
-          title,
-          icon: 'list-alt',
-          cards: [],
-        },
-      ],
-    }));
-  }
 
   render() {
-    console.log(this.props);
+    const { title, icon, cards } = this.props;
+
     return (
       <section className={styles.component}>
-        <h3 className={styles.title}>
+        <h3 className={title}>
           {this.props.title}
-          <span className={styles.icon}>{Icon(this.props)}</span>
+          <span className={icon}>{Icon(this.props)}</span>
         </h3>
-        <div className={styles.components}>
-          {this.state.cards.map(({ key, ...cardProps }) => (
-            <Card key={key} {...cardProps} />
+        <div className={styles.columns}>
+          {cards.map(cardData => (
+            <Card key={cardData.id} {...cardData} />
           ))}
         </div>
-        <Creator
+        {/* <Creator
           text={settings.cardCreatorText}
           action={title => {
             this.addCard(title);
           }}
-        />
+        /> */}
       </section>
     );
   }
