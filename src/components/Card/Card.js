@@ -7,6 +7,9 @@ class Card extends React.Component {
   static propTypes = {
     title: PropTypes.string,
   };
+  static defaultProps = {
+    icon: settings.defaultCardIcon,
+  };
 
   render() {
     const { title } = this.props;
