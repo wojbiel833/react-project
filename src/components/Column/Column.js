@@ -21,11 +21,11 @@ class Column extends React.Component {
   };
 
   render() {
-    const { title, icon, cards, addCard } = this.props;
+    const { icon, cards, addCard } = this.props;
     console.log(this.props);
     return (
       <section className={styles.component}>
-        <h3 className={title}>
+        <h3 className={styles.title}>
           {this.props.title}
           <span className={icon}>{Icon(this.props)}</span>
         </h3>
