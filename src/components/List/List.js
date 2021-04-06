@@ -3,7 +3,7 @@ import ReactHtmlParser from 'react-html-parser';
 import PropTypes from 'prop-types';
 import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
-import Column from '../App/ColumnContainer.js';
+import Column from '../Column/ColumnContainer.js';
 import Creator from '../Creator/Creator.js';
 // import Card from '../Card/Card.js';
 import { settings } from '../../data/dataStore';

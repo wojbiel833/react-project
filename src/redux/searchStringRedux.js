@@ -1,9 +1,5 @@
-import shortid from 'shortid';
-
 // selectors
-export const getSearchString = state => ({
-  searchString: state.searchString,
-});
+export const getSearchString = state => state.searchString;
 
 export const countVisibleCards = ({ cards }) => cards.length;
 export const countAllCards = ({ cards, searchString }) =>
@@ -18,7 +14,7 @@ export const CHANGE = createActionName('ADD_SEARCH');
 
 // action creators
 export const createActionSearch = payload => ({
-  payload: { ...payload, id: shortid.generate() },
+  payload: payload,
   type: CHANGE,
 });
 
@@ -26,7 +22,7 @@ export const createActionSearch = payload => ({
 export default function reducer(statePart = '', action = {}) {
   switch (action.type) {
     case CHANGE:
-      return [...statePart, action.payload];
+      return action.payload;
     default:
       return statePart;
   }

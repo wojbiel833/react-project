@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import List from '../List/List.js';
+import List from './List.js';
 import {
   getColumnsForList,
   createActionAddColumn,
