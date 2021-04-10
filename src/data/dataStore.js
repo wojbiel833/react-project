@@ -17,6 +17,7 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+  icon: '<i class="fas fa-american-sign-language-interpreting"></i>',
 };
 
 export const listData = {
@@ -140,9 +141,20 @@ const cards = [
     title: 'Skyrim',
   },
 ];
+export const info = {
+  title: 'Info',
+  imgSrc: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  content: 'Lorem ipsum dolor sit amet, consectetur',
+};
+
+export const faq = {
+  title: 'FAQ',
+  imgSrc: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  content: 'Lorem ipsum dolor sit amet',
+};
 
 const initialStoreData = {
-  app: {...pageContents},
+  app: { ...pageContents },
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
