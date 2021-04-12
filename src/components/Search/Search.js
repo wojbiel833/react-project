@@ -47,7 +47,7 @@ class Search extends React.Component {
     const { text, countVisible, countAll } = this.props;
     const { value } = this.state;
     const { icon } = settings.search;
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <Container>
         <div className={styles.component}>

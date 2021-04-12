@@ -12,7 +12,7 @@ const Info = () => (
   </Container>
 );
 Info.propTypes = {
-  titleText: PropTypes.node.isRequired,
+  titleText: PropTypes.node,
   imgSrc: PropTypes.string,
 };
 
