@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Column.scss';
-import Creator from '../Creator/Creator.js';
-import Card from '../Card/Card.js';
 import Icon from './Icon.js';
-import { settings } from '../../data/dataStore';
+import Container from '../Container/Container';
+import ListLink from '../ListLink/ListLink';
 
 class SearchResults extends React.Component {
   static propTypes = {
@@ -15,29 +14,26 @@ class SearchResults extends React.Component {
     icon: PropTypes.string,
     addCard: PropTypes.func,
   };
-  static defaultProps = {
-    children: <p>I can do all the things!</p>,
-    icon: settings.defaultColumnIcon,
-  };
+  // static defaultProps = {
+  //   children: <p>I can do all the things!</p>,
+  //   icon: settings.defaultColumnIcon,
+  // };
 
   render() {
-    const { icon, cards, addCard } = this.props;
+    const { icon } = this.props;
     console.log(this.props);
     return (
-      <section className={styles.component}>
-        <h3 className={styles.title}>
-          {this.props.title}
-          <span className={icon}>{Icon(this.props)}</span>
-        </h3>
-        <div className={styles.columns}>
-          {cards.map(cardData => (
-            <Card key={cardData.id} {...cardData} />
-          ))}
-        </div>
-        <div className={styles.columns}>
-          <Creator text={settings.cardCreatorText} action={addCard} />
-        </div>
-      </section>
+      <Container>
+        <section className={styles.component}>
+          <h3 className={styles.title}>
+            {this.props.title}
+            <span className={icon}>{Icon(this.props)}</span>
+          </h3>
+          <div className={styles.columns}>
+            <ListLink />
+          </div>
+        </section>
+      </Container>
     );
   }
 }

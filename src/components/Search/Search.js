@@ -8,6 +8,13 @@ import Container from '../Container/Container';
 import { withRouter } from 'react-router';
 
 class Search extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: '' };
+
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
+  }
   static propTypes = {
     text: PropTypes.string,
     searchString: PropTypes.any,
